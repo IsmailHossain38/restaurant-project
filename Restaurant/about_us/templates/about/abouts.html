@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}
+about us
+{% endblock %}
+
+{% block content %}
+<h1 class="text-light text-center">{{ ide }}</h1>
+<div class="text-center text-light p-5">
+    <h1 class="text-center">About Us </h1>
+    <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking </p>
+    <hr class="text-light">
+</div>
+
+
+
+<div class="container">
+    
+    <div class="row">
+        <div class="col-md-6 p-4 justify-content-between align-items-center">
+            <img style="border-radius:10px;" src="{% static 'about.png' %}" alt="" width="500px" height ="100%">
+            <p style ="font-size:20px;" class=" pt-5 text-light align-items-center">It is a long established fact that a reader will be distracted by the readable content of a page when looking </p>
+    
+        </div>
+        <div class="col-md-6 p-4 justify-content-between">
+            <img src="" alt="">
+            <p style ="font-size:20px;" class="text-light align-items-center">Establish a mission statement. <br>
+                Contect us: 018848935. <br>
+                Email : ismu@gmail.com <br>
+                Address : Feni Sadar <br>
+                Location : Feni <br>
+                Explain what you're offering them. 
+                Cite examples of whom you've served. 
+                Describe your values.  </p>
+    
+        </div>
+    
+    </div>
+    
+</div>
+
+
+{% endblock %}

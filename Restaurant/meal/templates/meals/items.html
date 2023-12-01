@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+Show Items
+{% endblock %}
+{%block content1%}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+{%endblock content1%}
+
+{% block content %}
+<h1 class="text-light text-center">{{ id }}</h1>
+<div class="container">
+    <div class="row">
+        {% for category in data.categories %}
+        <div class="col-md-4 mt-3">
+            <div class="card" style="width: 18rem;">
+                <img src="{{ category.strCategoryThumb }}" alt="">
+                <div class="card-body">
+                    <h5 class="card-title">ID: {{ category.idCategory }}</h5>
+                    <h5 class="card-title">Food Name: {{ category.strCategory }}</h5>
+                    <p class="card-text">{{ category.strCategoryDescription | truncatewords:10 }}</p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
